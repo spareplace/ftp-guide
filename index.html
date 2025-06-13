@@ -781,60 +781,6 @@
             </div>
           </section>
 
-          <!-- Monitoring -->
-          <section
-            id="monitoring"
-            class="bg-white rounded-xl shadow-lg p-8 mb-8"
-          >
-            <div class="flex items-center mb-6">
-              <div
-                class="step-number w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-4"
-              >
-                5
-              </div>
-              <h2 class="text-3xl font-bold text-gray-900">
-                Monitoring & Logs
-              </h2>
-            </div>
-
-            <div class="space-y-6">
-              <div class="bg-gray-900 rounded-lg p-6 text-white">
-                <h3 class="text-xl font-semibold mb-4">Log File Location</h3>
-                <div
-                  class="bg-black rounded p-3 text-green-400 font-mono text-sm"
-                >
-                  /var/log/csv-validator.log
-                </div>
-                <p class="text-gray-300 text-sm mt-2">
-                  Both CSV and Excel processors log to this file
-                </p>
-              </div>
-
-              <div class="bg-main-green rounded-lg p-6 text-white">
-                <h3 class="text-xl font-semibold mb-4">Sample Log Output</h3>
-                <div
-                  class="bg-black rounded-lg p-4 font-mono text-sm overflow-x-auto"
-                >
-                  <div class="space-y-1">
-                    <div class="text-green-400">
-                      2024-12-10 14:30:45 - INFO - Excel validator initialized
-                    </div>
-                    <div class="text-blue-400">
-                      2024-12-10 14:30:52 - INFO - New file: testup.csv
-                    </div>
-                    <div class="text-yellow-400">
-                      2024-12-10 14:30:55 - INFO - Processing file for supplier
-                    </div>
-                    <div class="text-green-400">
-                      2024-12-10 14:31:02 - INFO - Complete: 1198 inserted, 45
-                      updated
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
           <!-- Best Practices -->
           <section
             id="best-practices"
@@ -844,7 +790,7 @@
               <div
                 class="step-number w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-4"
               >
-                6
+                5
               </div>
               <h2 class="text-3xl font-bold text-gray-900">Best Practices</h2>
             </div>
@@ -872,125 +818,6 @@
                   <li>• Avoid files larger than 100MB</li>
                   <li>• Don't use formulas in data cells</li>
                 </ul>
-              </div>
-            </div>
-          </section>
-
-          <!-- Live Example Section -->
-          <section class="bg-main-green rounded-xl p-8 text-white mb-8">
-            <h2 class="text-3xl font-bold mb-6">
-              Live Example: Complete Workflow
-            </h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div>
-                <h3 class="text-xl font-semibold mb-4">
-                  What You See in FileZilla
-                </h3>
-                <div
-                  class="bg-black bg-opacity-30 rounded-lg p-4 font-mono text-sm space-y-2"
-                >
-                  <div class="text-green-300">
-                    ✓ Connected to 135.125.219.71
-                  </div>
-                  <div class="text-blue-300">✓ Username: ecospare</div>
-                  <div class="text-yellow-300">
-                    ✓ Directory listing: /incoming successful
-                  </div>
-                  <div class="text-cyan-300">
-                    ⬆ Uploading: testup.csv (4195 bytes)
-                  </div>
-                  <div class="text-white">⏱ Queue: 4.1 KiB</div>
-                  <div class="text-green-300">✓ Transfer complete</div>
-                </div>
-              </div>
-              <div>
-                <h3 class="text-xl font-semibold mb-4">
-                  What Happens Behind the Scenes
-                </h3>
-                <div class="space-y-3 text-green-100">
-                  <div class="flex items-center">
-                    <div class="w-3 h-3 bg-white rounded-full mr-3"></div>
-                    <span class="text-sm"
-                      >File detected in /incoming within 3 seconds</span
-                    >
-                  </div>
-                  <div class="flex items-center">
-                    <div class="w-3 h-3 bg-yellow-400 rounded-full mr-3"></div>
-                    <span class="text-sm"
-                      >CSV validator script processes the file</span
-                    >
-                  </div>
-                  <div class="flex items-center">
-                    <div class="w-3 h-3 bg-blue-400 rounded-full mr-3"></div>
-                    <span class="text-sm"
-                      >Data validated against business rules</span
-                    >
-                  </div>
-                  <div class="flex items-center">
-                    <div class="w-3 h-3 bg-indigo-400 rounded-full mr-3"></div>
-                    <span class="text-sm">Valid data imported to database</span>
-                  </div>
-                  <div class="flex items-center">
-                    <div class="w-3 h-3 bg-purple-400 rounded-full mr-3"></div>
-                    <span class="text-sm"
-                      >File moved to /processed or /failed</span
-                    >
-                  </div>
-                  <div class="flex items-center">
-                    <div class="w-3 h-3 bg-pink-400 rounded-full mr-3"></div>
-                    <span class="text-sm"
-                      >Processing complete - data available in system</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-8 bg-white bg-opacity-10 rounded-lg p-6">
-              <h4 class="text-lg font-semibold mb-3">
-                Directory Structure You'll Navigate
-              </h4>
-              <div class="bg-black bg-opacity-50 rounded p-4 font-mono text-sm">
-                <div class="text-yellow-300">📁 / (root directory)</div>
-                <div class="text-blue-300 ml-4">
-                  📁 failed/
-                  <span class="text-gray-300"># Files with errors</span>
-                </div>
-                <div class="text-green-300 ml-4">
-                  📁 incoming/
-                  <span class="text-gray-300"># Upload your files here</span>
-                </div>
-                <div class="text-purple-300 ml-4">
-                  📁 processed/
-                  <span class="text-gray-300"
-                    ># Successfully processed files</span
-                  >
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Processing Statistics -->
-          <section class="bg-gray-900 rounded-xl p-8 text-white mb-8">
-            <h2 class="text-3xl font-bold text-center mb-8">
-              Processing Statistics Example
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
-              <div class="bg-gray-800 rounded-lg p-6">
-                <div class="text-3xl font-bold main-green mb-2">1,247</div>
-                <div class="text-gray-300">Products Processed</div>
-              </div>
-              <div class="bg-gray-800 rounded-lg p-6">
-                <div class="text-3xl font-bold main-green mb-2">1,198</div>
-                <div class="text-gray-300">Successfully Imported</div>
-              </div>
-              <div class="bg-gray-800 rounded-lg p-6">
-                <div class="text-3xl font-bold text-yellow-400 mb-2">49</div>
-                <div class="text-gray-300">Validation Errors</div>
-              </div>
-              <div class="bg-gray-800 rounded-lg p-6">
-                <div class="text-3xl font-bold text-red-400 mb-2">23</div>
-                <div class="text-gray-300">Products Removed</div>
               </div>
             </div>
           </section>
@@ -1168,53 +995,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-
-          <!-- Final Summary -->
-          <section
-            class="bg-main-green rounded-xl p-8 text-white text-center mb-8"
-          >
-            <div class="max-w-3xl mx-auto">
-              <div
-                class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6"
-              >
-                <svg
-                  class="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
-              </div>
-              <h2 class="text-3xl font-bold mb-4">You're All Set!</h2>
-              <p class="text-xl opacity-90 mb-6">
-                Your automated FTP processing service is ready to handle your
-                file uploads efficiently and reliably. Upload your files and
-                watch them process automatically in real-time.
-              </p>
-              <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  class="bg-white text-main-green px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 shadow-lg"
-                >
-                  Start Uploading Files
-                </button>
-                <button
-                  class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-main-green transition-all duration-200"
-                >
-                  View System Status
-                </button>
-              </div>
-              <p class="text-sm opacity-75 mt-6">
-                Questions? Check the troubleshooting section or contact our
-                support team.
-              </p>
             </div>
           </section>
         </div>
